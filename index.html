@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmic Defender</title>
+     <link rel="icon" type="image/x-icon" href="icon.png">
+    <link rel="stylesheet" href="styles.css">
+ </head>
+<body>
+    <div class="game-container">
+        <div class="stars"></div>
+        <div class="moving-stars"></div>
+        
+        <div class="ui">
+            <div class="score">Score: <span id="score">0</span></div>
+            <div class="lives">Lives: <span id="lives">3</span></div>
+            <div class="level">Level: <span id="level">1</span></div>
+            <div class="timer">Time: <span id="timer">00:00</span></div>
+        </div>
+
+        <div class="start-screen" id="startScreen">
+            <h1>🚀 Cosmic Defender</h1>
+            <p>Defend Earth from the alien invasion!<br>
+               Use arrow keys or WASD to move, SPACE to shoot.</p>
+            <button class="btn" onclick="startGame()">Start Mission</button>
+            <div class="controls">
+                <p>Desktop: Arrow Keys/WASD + Space <br> Mobile: Touch Controls</p>
+            </div>
+        </div>
+
+        <div class="game-over hidden" id="gameOver">
+            <h1>Mission Complete</h1>
+            <p id="finalScore">Final Score: 0</p>
+            <p id="gameOverMessage">You fought bravely, Commander!</p>
+            <button class="btn" onclick="restartGame()">New Mission</button>
+        </div>
+
+        <div class="player" id="player"></div>
+    </div>
+    <script src="script.js"></script>
+   
+</body>
+</html>
